@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <title>HangMan Game - Juan Rodriguez</title>
+</head>
+<body>
+    <div class="start-screen" id="start-screen">
+        <h1>Juego del Ahorcado</h1>
+        <h3>Juan Rodriguez</h3>
+        <p>Juego del ahorcado HTML, CSS, JS</p>
+        <button class="play-again-btn" id="start-btn">JUGAR</button>
+    </div>
+    <div class="header">
+        <h1>Juego del Ahorcado</h1>
+        <h4>By. Juan Rodriguez</h4>
+        <a href="https://github.com/xjdevx/hangman" target="_blank" class="header__link">
+            <ion-icon name="logo-github"></ion-icon>
+        </a>
+    </div>
+    <main>
+        <div class="hangman__box-1">
+            <div class="quote-container" id="quote-container"></div>
+            <input type="text" class="letter-input" id="input" placeholder="Ingresa una letra aqui">
+        </div>
+        <div class="hangman__box-2">
+            <div class="try-box">
+                <h2>Vidas Restantes</h2>
+                <div class="life-bar">
+                    <img src="./assets/heart.svg" alt="heart svg" class="heart-svg">
+                    <span id="remaining-attempts" class="remaining-attempts"></span>
+                </div>
+            </div>
+            <div class="wrong-box">
+                <h2>Letras incorrectas</h2>
+                <div class="wrong-letter-container" id="wrong-letter-container">
+                    <small>No hay letras incorrectas</small>
+                </div>
+            </div>
+        </div>
+    </main>
+    <div class="you-win" id="you-win">
+        <div class="you-win__content">
+            <img src="./assets/you-win.gif" class="you-win__image" alt="pepe frog winner">
+            <h3 class="you-win__title">Felicidades 🎉</h3>
+            <h4 class="you-win__subtitle">Ganaste!!!</h4>
+            <h5 class="selected-word"></h5>
+            <button id="play-again-win" class="play-again-btn">Volver a jugar</button>
+        </div>
+    </div>
+    <div class="game-over" id="game-over">
+        <div class="game-over__content">
+            <img src="./assets/game-over.gif" class="game-over__image" alt="pepe frog game over">
+            <h3 class="game-over__title">Una lastima 😔</h3>
+            <h4 class="game-over__subtitle">Perdiste</h4>
+            <h5 class="selected-word"></h5>
+            <button id="play-again-game-over" class="play-again-btn">Volver a jugar</button>
+        </div>
+    </div>
+    <script src="js/script.js"></script>
+</body>
+</html>
