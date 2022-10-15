@@ -117,7 +117,7 @@ const compareLetters = (typedLetter) => {
 
 // Cuando se dispara el evento al escribir en el input, se obtiene el valor y se pasa como parametro a la function de comparacion de letras con la palabra seleccionada, luego se borra el valor escrito para que solo permita el ingreso de letra por letra
 letterInput.addEventListener('input', ({target}) => {
-    let inputValue = target.value;
+    let inputValue = target.value.toLowerCase();
     compareLetters(inputValue);
     target.value = '';
 })
